@@ -7,3 +7,16 @@ bool searchHorizontal(vector<string>& matrix, string word) {
     }
     return false;
 }
+for (const auto& word : words) {
+        bool found = searchHorizontal(matrix, word) ||
+                     searchVertical(matrix, word) ||
+                     searchDiagonal(matrix, word);
+        if (found) {
+            cout << "Ada" << endl;
+        } else {
+            cout << "Tidak Ada" << endl;
+        }
+    }
+
+    return 0;
+}
